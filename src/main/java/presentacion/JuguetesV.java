@@ -17,6 +17,5 @@ public class JuguetesV {
     private JButton btnModificar;
     private JButton btnEliminar;
     private JButton btnBuscar;
-    private JButton btnStock;
     private JButton btnCerrar;
 }

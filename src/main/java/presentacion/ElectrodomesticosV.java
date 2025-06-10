@@ -18,7 +18,6 @@ public class ElectrodomesticosV {
     private JButton btnModificar;
     private JButton btnEliminar;
     private JButton btnBuscar;
-    private JButton btnStock;
     private JButton btnCerrar;
     private JLabel txtTitulo;
 }
