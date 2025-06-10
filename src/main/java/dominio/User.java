@@ -5,23 +5,20 @@ public class User {
     private String name;
     private String passwordHash;
     private String email;
-    private byte status;
+    private byte isAdmin;
 
     public User() {
 
     }
 
-    public User(int id, String name, String passwordHash, String email, byte status) {
-        this.id = id;
+    public User(String name, String passwordHash, String email, byte isAdmin) {
         this.name = name;
         this.passwordHash = passwordHash;
         this.email = email;
-        this.status = status;
+        this.isAdmin = isAdmin;
     }
 
-    public int getId() {
-        return id;
-    }
+    public int getId(){ return id;}
 
     public void setId(int id) {
         this.id = id;
@@ -51,22 +48,22 @@ public class User {
         this.email = email;
     }
 
-    public byte getStatus() {
-        return status;
+    public byte getIsAdmin() {
+        return isAdmin;
     }
 
-    public void setStatus(byte status) {
-        this.status = status;
+    public void setIsAdmin(byte isAdmin) {
+        this.isAdmin = isAdmin;
     }
 
-    public String getStrEstatus(){
+    public String getStrAdmin(){
         String str="";
-        switch (status) {
+        switch (isAdmin) {
             case 1:
-                str = "ACTIVO";
+                str = "CLIENTE";
                 break;
             case 2:
-                str = "INACTIVO";
+                str = "VENDEDOR";
                 break;
             default:
                 str = "";
