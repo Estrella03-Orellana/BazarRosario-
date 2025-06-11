@@ -174,7 +174,7 @@ public class UserDAO {
         try {
             ps = conn.connect().prepareStatement("SELECT Usuld, NombreUsu, Email, IsAdmin " +
                     "FROM USUARIOS " +
-                    "WHERE Email = ? AND Password = ? AND IsAdmin = 1");
+                    "WHERE Email = ? AND Password = ?");
 
             ps.setString(1, user.getEmail());
             ps.setString(2, PasswordHasher.hashPassword(user.getPasswordHash()));

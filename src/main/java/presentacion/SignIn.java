@@ -12,7 +12,7 @@ public class SignIn extends JDialog{
     private JTextField txtNombre;
     private JTextField txtEmail;
     private JButton btnCrearCuenta;
-    private JPasswordField fieldContraseña;
+    private JPasswordField fieldContrasena;
     private JLabel lblBienvenida;
     private JTextPane registrateConBazarRosarioTextPane;
     private JPanel mainPanel;
@@ -39,7 +39,7 @@ public class SignIn extends JDialog{
             public void actionPerformed(ActionEvent e) {
                 String nombre = txtNombre.getText().trim();
                 String email = txtEmail.getText().trim();
-                String password = new String(fieldContraseña.getPassword());
+                String password = new String(fieldContrasena.getPassword());
                 String tipoSeleccionado = (String) cbTipo.getSelectedItem();
 
                 // Validar campos vacíos
@@ -51,9 +51,9 @@ public class SignIn extends JDialog{
                 // Asignar isAdmin según tipo
                 byte isAdmin = 0;
                 if (tipoSeleccionado.equals("CLIENTE")) {
-                    isAdmin = 1;
+                    isAdmin = 0;
                 } else if (tipoSeleccionado.equals("VENDEDOR")) {
-                    isAdmin = 2;
+                    isAdmin = 1;
                 }
 
 

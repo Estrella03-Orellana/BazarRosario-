@@ -36,26 +36,26 @@ public class MainForm extends JFrame {
         JMenuBar menuBar = new JMenuBar();
         setJMenuBar(menuBar);
 
-       /* JMenu menuPerfil = new JMenu("Perfil");
+        JMenu menuPerfil = new JMenu("Perfil");
         menuBar.add(menuPerfil);
 
-        JMenuItem itemChangePassword = new JMenuItem("Cambiar contraseña");
+        /*JMenuItem itemChangePassword = new JMenuItem("Cambiar contraseña");
         menuPerfil.add(itemChangePassword);
         itemChangePassword.addActionListener(e -> {
             ChangePasswordForm changePassword = new ChangePasswordForm(this);
             changePassword.setVisible(true);
-        });
+        });*/
 
         JMenuItem itemChangeUser = new JMenuItem("Cambiar de usuario");
         menuPerfil.add(itemChangeUser);
         itemChangeUser.addActionListener(e -> {
-            LoginForm loginForm = new LoginForm(this);
+            Login loginForm = new Login(this);
             loginForm.setVisible(true);
         });
 
         JMenuItem itemSalir = new JMenuItem("Salir");
         menuPerfil.add(itemSalir);
-        itemSalir.addActionListener(e -> System.exit(0));*/
+        itemSalir.addActionListener(e -> System.exit(0));
 
         // Menú "Matenimiento"
         JMenu menuMantenimiento = new JMenu("Mantenimientos");
@@ -64,7 +64,7 @@ public class MainForm extends JFrame {
         menuBar.add(menuMas);
 
 
-        if(userAutenticate.getIsAdmin() == 1){
+        if(userAutenticate.getIsAdmin() == 0){
             JMenuItem itemCarrito = new JMenuItem("Carrito de compras");
             menuMas.add(itemCarrito);
             itemCarrito.addActionListener(e -> {
