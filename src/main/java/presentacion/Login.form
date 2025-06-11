@@ -59,7 +59,7 @@
           <background color="-943786"/>
           <font name="Palatino Linotype" size="16" style="1"/>
           <foreground color="-16777216"/>
-          <horizontalTextPosition value="10"/>
+          <horizontalTextPosition value="0"/>
           <margin top="0" left="0" bottom="0" right="0"/>
           <selected value="false"/>
           <text value="Ingresar"/>
