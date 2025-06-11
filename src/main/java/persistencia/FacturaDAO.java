@@ -1,8 +1,6 @@
 package persistencia;
 
 import dominio.Factura;
-import dominio.FacturaDetalle;
-import dominio.Producto;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -56,9 +54,8 @@ public class FacturaDAO {
     public Factura getById(int id) throws SQLException {
         Factura factura = new Factura();
         try{
-            ps = conn.connect().prepareStatement("SELECT CodFac, NombreUsu, Pago, Fecha" +
-                    "FROM FACTURAS " +
-                    "WHERE CodFac = ?");
+            ps = conn.connect().prepareStatement("SELECT CodFac, NombreUsu, Pago, Fecha " +
+                    "FROM FACTURAS WHERE CodFac = ? ");
 
             ps.setInt(1, id);
 

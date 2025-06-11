@@ -1,5 +1,6 @@
 package presentacion;
 
+import dominio.FacturaDetalle;
 import dominio.Producto;
 import persistencia.ProductoDAO;
 
@@ -15,18 +16,26 @@ public class ConfiteriayPapeleriaC extends JDialog {
     private JButton btnVer;
     private JScrollPane mainScrollPanel;
     private JTable tblConfi;
+    private JButton bntRegresar;
     private MainForm mainForm;
     private ProductoDAO productoDAO;
     private final int ID_CATEGORIA = 6;
+    private ArrayList<FacturaDetalle> listaFacturas;
+
+    public ArrayList<FacturaDetalle> getListaFacturas() {
+        return this.listaFacturas;
+    }
 
     public ConfiteriayPapeleriaC(MainForm mainForm){
         this.mainForm = mainForm;
+        listaFacturas = mainForm.getListaFacturas();
         productoDAO = new ProductoDAO();
         setSize(500, 300);
         setContentPane(mainPanel);
         setModal(true);
         setTitle("Confitería y Papelería");
         setLocationRelativeTo(mainForm);
+        getAll();
         txtBuscar.addKeyListener(new KeyAdapter() {
             // Sobrescribe el método keyReleased, que se llama cuando se suelta una tecla.
             @Override
@@ -44,8 +53,15 @@ public class ConfiteriayPapeleriaC extends JDialog {
             if (producto != null) {
                 ProductoC productoC = new ProductoC(this.mainForm, producto);
                 productoC.setVisible(true);
+                if(productoC.getFacturaDetalle().getCodFac() > 1
+                || productoC.getFacturaDetalle().getCantidad() > 0){
+                    listaFacturas.add(productoC.getFacturaDetalle());
+                }
                 getAll();
             }
+        });
+        bntRegresar.addActionListener(s -> {
+            this.dispose();
         });
     }
 
