@@ -40,7 +40,7 @@ public class ListaCompraC extends JDialog {
         setSize(500, 300);
         setContentPane(mainPanel);
         setModal(true);
-        setTitle("Confitería y Papelería");
+        setTitle("Lista de compras");
         setLocationRelativeTo(mainForm);
         createTable();
 

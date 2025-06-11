@@ -73,6 +73,13 @@ public class MainForm extends JFrame {
                 listaFacturas = formCarrito.getListaFacturas();
             });
 
+            JMenuItem itemFacturas = new JMenuItem("Facturas anteriores");
+            menuMas.add(itemFacturas);
+            itemFacturas.addActionListener(e -> {
+                FacturasC formFacturas = new FacturasC(this);
+                formFacturas.setVisible(true);
+            });
+
             JMenuItem itemConfi = new JMenuItem("Confitería y Papelería");
             menuMantenimiento.add(itemConfi);
             itemConfi.addActionListener(e -> {

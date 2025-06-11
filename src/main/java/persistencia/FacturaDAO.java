@@ -84,7 +84,7 @@ public class FacturaDAO {
     public ArrayList<Factura> getFacturas(String nombre) throws SQLException {
         ArrayList<Factura> records = new ArrayList<>();
         try {
-            ps = conn.connect().prepareStatement("SELECT CodFac, NombreUsu, Pago, Fecha" +
+            ps = conn.connect().prepareStatement("SELECT CodFac, NombreUsu, Pago, Fecha " +
                     "FROM FACTURAS " +
                     "WHERE NombreUsu = ?");
 
