@@ -23,13 +23,13 @@ public class UserDAO {
         try{
             PreparedStatement ps = conn.connect().prepareStatement(
                     "INSERT INTO " +
-                            "Users (name, passwordHash, email, status)" +
+                            "USUARIOS (NombreUsu, Email, Password, IsAdmin)" +
                             "VALUES (?, ?, ?, ?)",
                     java.sql.Statement.RETURN_GENERATED_KEYS
             );
             ps.setString(1, user.getName());
-            ps.setString(2, PasswordHasher.hashPassword(user.getPasswordHash()));
-            ps.setString(3, user.getEmail());
+            ps.setString(2, user.getEmail());
+            ps.setString(3, PasswordHasher.hashPassword(user.getPasswordHash()));
             ps.setByte(4, user.getIsAdmin());
 
             int affectedRows = ps.executeUpdate();
@@ -57,9 +57,9 @@ public class UserDAO {
         boolean res = false;
         try{
             ps = conn.connect().prepareStatement(
-                    "UPDATE Users " +
-                            "SET name = ?, email = ?, status = ? " +
-                            "WHERE id = ?"
+                    "UPDATE USUARIOS " +
+                            "SET NombreUsu = ?, Email = ?, IsAdmin = ? " +
+                            "WHERE Usuld = ?"
             );
 
             ps.setString(1, user.getName());
@@ -85,7 +85,7 @@ public class UserDAO {
         boolean res = false;
         try{
             ps = conn.connect().prepareStatement(
-                    "DELETE FROM Users WHERE id = ?"
+                    "DELETE FROM USUARIOS WHERE id = ?"
             );
             ps.setInt(1, user.getId());
 
@@ -107,9 +107,9 @@ public class UserDAO {
         ArrayList<User> records  = new ArrayList<>();
 
         try {
-            ps = conn.connect().prepareStatement("SELECT id, name, email, status " +
-                    "FROM Users " +
-                    "WHERE name LIKE ?");
+            ps = conn.connect().prepareStatement("SELECT Usuld, NombreUsu, Email, IsAdmin " +
+                    "FROM USUARIOS " +
+                    "WHERE NombreUsu LIKE ?");
 
             ps.setString(1, "%" + name + "%");
 
@@ -139,9 +139,9 @@ public class UserDAO {
         User user  = new User();
 
         try {
-            ps = conn.connect().prepareStatement("SELECT id, name, email, status " +
-                    "FROM Users " +
-                    "WHERE id = ?");
+            ps = conn.connect().prepareStatement("SELECT Usuld, NombreUsu, Email, IsAdmin " +
+                    "FROM USUARIOS " +
+                    "WHERE Usuld = ?");
 
             ps.setInt(1, id);
 
@@ -172,9 +172,9 @@ public class UserDAO {
         User userAutenticate = new User();
 
         try {
-            ps = conn.connect().prepareStatement("SELECT id, name, email, status " +
-                    "FROM Users " +
-                    "WHERE email = ? AND passwordHash = ? AND status = 1");
+            ps = conn.connect().prepareStatement("SELECT Usuld, NombreUsu, Email, IsAdmin " +
+                    "FROM USUARIOS " +
+                    "WHERE Email = ? AND Password = ? AND IsAdmin = 1");
 
             ps.setString(1, user.getEmail());
             ps.setString(2, PasswordHasher.hashPassword(user.getPasswordHash()));
@@ -204,9 +204,9 @@ public class UserDAO {
         boolean res = false;
         try{
             ps = conn.connect().prepareStatement(
-                    "UPDATE Users " +
-                            "SET passwordHash = ? " +
-                            "WHERE id = ?"
+                    "UPDATE USUARIOS " +
+                            "SET Password = ? " +
+                            "WHERE Usuld = ?"
             );
             ps.setString(1, PasswordHasher.hashPassword(user.getPasswordHash()));
             ps.setInt(2, user.getId());
