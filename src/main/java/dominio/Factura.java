@@ -1,17 +1,17 @@
 package dominio;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 public class Factura {
     private int codFac;
     private String nombreUsu;
     private double pago;
-    private Date fecha;
+    private Timestamp fecha;
 
     public Factura() {
     }
 
-    public Factura(String nombreUsu, double pago, Date fecha) {
+    public Factura(String nombreUsu, double pago, Timestamp fecha) {
         this.nombreUsu = nombreUsu;
         this.pago = pago;
         this.fecha = fecha;
@@ -41,11 +41,12 @@ public class Factura {
         this.pago = pago;
     }
 
-    public Date getFecha() {
+    public Timestamp getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+
+    public void setFecha(Timestamp fecha) {
         this.fecha = fecha;
     }
 }
