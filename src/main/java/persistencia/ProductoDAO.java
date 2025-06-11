@@ -105,15 +105,16 @@ public class ProductoDAO {
         return res;
     }
 
-    public ArrayList<Producto> search(String name) throws SQLException {
+    public ArrayList<Producto> search(String name, int id) throws SQLException {
         ArrayList<Producto> records  = new ArrayList<>();
 
         try {
             ps = conn.connect().prepareStatement("SELECT ProdId, CategoriaId, TipoProdu, NombreProdu, Precio, Stock, IsOferta " +
                     "FROM PRODUCTOS " +
-                    "WHERE NombreProdu = ?");
+                    "WHERE NombreProdu LIKE ? AND CategoriaId = ?");
 
             ps.setString(1, "%" + name + "%");
+            ps.setInt(2, id);
 
             rs = ps.executeQuery();
 
@@ -131,7 +132,42 @@ public class ProductoDAO {
             ps.close();
             rs.close();
         } catch (SQLException ex){
-            throw new SQLException("Error al buscar usuarios: " + ex.getMessage(), ex);
+            throw new SQLException("Error al buscar productos: " + ex.getMessage(), ex);
+        } finally {
+            ps = null;
+            rs = null;
+            conn.disconnect();
+        }
+        return records;
+    }
+
+    public ArrayList<Producto> getAll(int id) throws SQLException {
+        ArrayList<Producto> records  = new ArrayList<>();
+
+        try {
+            ps = conn.connect().prepareStatement("SELECT ProdId, CategoriaId, TipoProdu, NombreProdu, Precio, Stock, IsOferta " +
+                    "FROM PRODUCTOS " +
+                    "WHERE CategoriaId = ?");
+
+            ps.setInt(1, id);
+
+            rs = ps.executeQuery();
+
+            while (rs.next()){
+                Producto producto = new Producto();
+                producto.setId(rs.getInt(1));
+                producto.setCategoriaId(rs.getInt(2));
+                producto.setTipoProdu(rs.getString(3));
+                producto.setNombreProdu(rs.getString(4));
+                producto.setPrecio(rs.getDouble(5));
+                producto.setStock(rs.getInt(6));
+                producto.setIsOferta(rs.getByte(7));
+                records.add(producto);
+            }
+            ps.close();
+            rs.close();
+        } catch (SQLException ex){
+            throw new SQLException("Error al buscar productos: " + ex.getMessage(), ex);
         } finally {
             ps = null;
             rs = null;
