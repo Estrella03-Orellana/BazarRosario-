@@ -27,33 +27,16 @@
           <size top="0" left="0" bottom="0" right="0"/>
         </border>
         <children>
-          <component id="80066" class="javax.swing.JLabel" binding="lblLogo">
-            <constraints>
-              <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <foreground color="-1580"/>
-              <horizontalAlignment value="10"/>
-              <horizontalTextPosition value="0"/>
-              <iconTextGap value="5"/>
-              <text value=""/>
-            </properties>
-          </component>
           <component id="24e89" class="javax.swing.JLabel" binding="lblBienvenida">
             <constraints>
               <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <font name="PMingLiU-ExtB" size="28" style="1"/>
+              <font name="PMingLiU-ExtB" size="22" style="1"/>
               <foreground color="-16777216"/>
               <text value="Bienvenid@"/>
             </properties>
           </component>
-          <vspacer id="47bd">
-            <constraints>
-              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-            </constraints>
-          </vspacer>
           <hspacer id="8079d">
             <constraints>
               <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
@@ -72,6 +55,21 @@
               <text value="¡Entra a Bazar Rosario y llena tu nevera, tu hogar y tu vida con la facilidad de compra con nosotros!"/>
             </properties>
           </component>
+          <vspacer id="50408">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <component id="65ffb" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="PMingLiU-ExtB" size="36" style="1"/>
+              <foreground color="-16777216"/>
+              <text value="Bazar Rosario"/>
+            </properties>
+          </component>
         </children>
       </grid>
       <hspacer id="ad862">
@@ -86,7 +84,7 @@
         <properties>
           <alignmentX value="0.0"/>
           <background color="-943786"/>
-          <font name="Palatino Linotype" size="16" style="1"/>
+          <font name="Palatino Linotype" size="18" style="1"/>
           <foreground color="-16777216"/>
           <horizontalTextPosition value="0"/>
           <selected value="false"/>
@@ -100,6 +98,7 @@
           </grid>
         </constraints>
         <properties>
+          <foreground color="-11644845"/>
           <text value=""/>
           <toolTipText value="Password"/>
         </properties>
@@ -132,7 +131,7 @@
         </constraints>
         <properties>
           <font name="Palatino Linotype" size="16" style="1"/>
-          <foreground color="-8158072"/>
+          <foreground color="-11644845"/>
           <text value=""/>
         </properties>
       </component>
@@ -144,7 +143,7 @@
           <actionCommand value=" Ingresar "/>
           <alignmentX value="0.0"/>
           <background color="-943786"/>
-          <font name="Palatino Linotype" size="16" style="1"/>
+          <font name="Palatino Linotype" size="18" style="1"/>
           <foreground color="-16777216"/>
           <horizontalTextPosition value="0"/>
           <margin top="0" left="0" bottom="0" right="0"/>
