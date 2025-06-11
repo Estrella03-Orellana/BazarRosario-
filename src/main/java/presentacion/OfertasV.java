@@ -2,7 +2,7 @@ package presentacion;
 
 import javax.swing.*;
 
-public class OfertasV {
+public class OfertasV extends JDialog{
     private JTextField txtCodigoProduOferta;
     private JComboBox cbCategoria;
     private JComboBox cbTipoProdu;
@@ -18,4 +18,7 @@ public class OfertasV {
     private JLabel lblNomProdu;
     private JLabel lblPrecio;
     private JLabel lblStock;
+
+    public OfertasV(MainForm mainForm) {
+    }
 }

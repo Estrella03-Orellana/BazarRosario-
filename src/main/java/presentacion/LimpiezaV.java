@@ -2,7 +2,7 @@ package presentacion;
 
 import javax.swing.*;
 
-public class LimpiezaV {
+public class LimpiezaV extends JDialog{
     private JTextField txtCodigoLimpieza;
     private JComboBox cbTipoLimpieza;
     private JTextField txtNomProdu;
@@ -13,4 +13,7 @@ public class LimpiezaV {
     private JButton btnEliminar;
     private JButton btnBuscar;
     private JButton btnCerrar;
+
+    public LimpiezaV(MainForm mainForm) {
+    }
 }

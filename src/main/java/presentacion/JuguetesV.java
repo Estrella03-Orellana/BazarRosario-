@@ -2,7 +2,7 @@ package presentacion;
 
 import javax.swing.*;
 
-public class JuguetesV {
+public class JuguetesV extends JDialog{
     private JLabel lblCodigoJuguete;
     private JLabel lblTipoJugue;
     private JLabel lblNomJugue;
@@ -18,4 +18,7 @@ public class JuguetesV {
     private JButton btnEliminar;
     private JButton btnBuscar;
     private JButton btnCerrar;
+
+    public JuguetesV(MainForm mainForm) {
+    }
 }
