@@ -89,6 +89,87 @@ public class MainForm extends JFrame {
                     listaFacturas = formConfi.getListaFacturas();
                 }
             });
+            JMenuItem itemCui = new JMenuItem("Cuidado Personal");
+            menuMantenimiento.add(itemCui);
+            itemCui.addActionListener(e -> {
+                CuidadoPersonalC formCui =new CuidadoPersonalC(this);
+                formCui.setVisible(true);
+                if(formCui.getListaFacturas().size() > 0){
+                    listaFacturas = formCui.getListaFacturas();
+                }
+            });
+            JMenuItem itemDepo = new JMenuItem("Deportes");
+            menuMantenimiento.add(itemDepo);
+            itemDepo.addActionListener(e -> {
+                DeportesC formDepo =new DeportesC(this);
+                formDepo.setVisible(true);
+                if(formDepo.getListaFacturas().size() > 0){
+                    listaFacturas = formDepo.getListaFacturas();
+                }
+            });
+            JMenuItem itemElec = new JMenuItem("Electrodomesticos");
+            menuMantenimiento.add(itemElec);
+            itemElec.addActionListener(e -> {
+                ElectrodomesticosC formElec =new ElectrodomesticosC(this);
+                formElec.setVisible(true);
+                if(formElec.getListaFacturas().size() > 0){
+                    listaFacturas = formElec.getListaFacturas();
+                }
+            });
+            JMenuItem itemHogar = new JMenuItem("Hogar y Cocina");
+            menuMantenimiento.add(itemHogar);
+            itemHogar.addActionListener(e -> {
+                HogaryCocinaC formHogar =new HogaryCocinaC(this);
+                formHogar.setVisible(true);
+                if(formHogar.getListaFacturas().size() > 0){
+                    listaFacturas = formHogar.getListaFacturas();
+                }
+            });
+            JMenuItem itemJug = new JMenuItem("Juguetes");
+            menuMantenimiento.add(itemJug);
+            itemJug.addActionListener(e -> {
+                JuguetesC formJug =new JuguetesC(this);
+                formJug.setVisible(true);
+                if(formJug.getListaFacturas().size() > 0){
+                    listaFacturas = formJug.getListaFacturas();
+                }
+            });
+            JMenuItem itemLimp = new JMenuItem("Limpieza");
+            menuMantenimiento.add(itemLimp);
+            itemLimp.addActionListener(e -> {
+                LimpiezaC formLimp =new LimpiezaC(this);
+                formLimp.setVisible(true);
+                if(formLimp.getListaFacturas().size() > 0){
+                    listaFacturas = formLimp.getListaFacturas();
+                }
+            });
+            JMenuItem itemOfer = new JMenuItem("Ofertas");
+            menuMantenimiento.add(itemOfer);
+            itemOfer.addActionListener(e -> {
+                OfertasC formOfer =new OfertasC(this);
+                formOfer.setVisible(true);
+                if(formOfer.getListaFacturas().size() > 0){
+                    listaFacturas = formOfer.getListaFacturas();
+                }
+            });
+            JMenuItem itemRopa = new JMenuItem("Ropa");
+            menuMantenimiento.add(itemRopa);
+            itemRopa.addActionListener(e -> {
+                RopaC formRopa =new RopaC(this);
+                formRopa.setVisible(true);
+                if(formRopa.getListaFacturas().size() > 0){
+                    listaFacturas = formRopa.getListaFacturas();
+                }
+            });
+            JMenuItem itemTec = new JMenuItem("Tecnología");
+            menuMantenimiento.add(itemTec);
+            itemTec.addActionListener(e -> {
+                TecnologiaC formTec =new TecnologiaC(this);
+                formTec.setVisible(true);
+                if(formTec.getListaFacturas().size() > 0){
+                    listaFacturas = formTec.getListaFacturas();
+                }
+            });
         }
 
         this.setVisible(true);
