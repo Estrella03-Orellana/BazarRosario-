@@ -32,12 +32,14 @@
           <font name="Palatino Linotype" size="12"/>
           <foreground color="-16777216"/>
         </properties>
-        <border type="none"/>
+        <border type="none">
+          <size top="5" left="5" bottom="5" right="5"/>
+        </border>
         <children>
           <component id="f4b10" class="javax.swing.JTable" binding="tblConfi">
             <constraints/>
             <properties>
-              <font size="12"/>
+              <font/>
               <foreground color="-11644845"/>
               <gridColor color="-14803166"/>
               <selectionBackground color="-7264"/>
