@@ -2,7 +2,7 @@ package presentacion;
 
 import javax.swing.*;
 
-public class CuidadoPersonalV {
+public class CuidadoPersonalV extends JDialog{
     private JTextField txtCodigoCuidado;
     private JComboBox cbTipoCuidado;
     private JTextField txtNomProdu;
@@ -13,4 +13,7 @@ public class CuidadoPersonalV {
     private JButton btnEliminar;
     private JButton btnBuscar;
     private JButton btnCerrar;
+
+    public CuidadoPersonalV(MainForm mainForm) {
+    }
 }

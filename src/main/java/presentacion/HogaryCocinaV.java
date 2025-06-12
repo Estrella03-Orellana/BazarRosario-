@@ -2,7 +2,7 @@ package presentacion;
 
 import javax.swing.*;
 
-public class HogaryCocinaV {
+public class HogaryCocinaV extends JDialog{
     private JTextField txtCodigoProdu;
     private JComboBox cbTipoProdu;
     private JTextField txtNomProdu;
@@ -13,4 +13,7 @@ public class HogaryCocinaV {
     private JButton btnEliminar;
     private JButton btnBuscar;
     private JButton btnCerrar;
+
+    public HogaryCocinaV(MainForm mainForm) {
+    }
 }
