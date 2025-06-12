@@ -1,6 +1,7 @@
 package persistencia;
 
 import dominio.Factura;
+import dominio.Producto;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -79,6 +80,27 @@ public class FacturaDAO {
             conn.disconnect();
         }
         return factura;
+    }
+
+    public boolean delete(Factura factura) throws SQLException {
+        boolean res = false;
+        try {
+            ps = conn.connect().prepareStatement(
+                    "DELETE FROM FACTURAS WHERE CodFac = ?"
+            );
+            ps.setInt(1, factura.getCodFac());
+
+            if(ps.executeUpdate() > 0){
+                res = true;
+            }
+            ps.close();
+        }catch (SQLException e){
+            throw new SQLException("Error al eliminar la factura: " + e.getMessage(), e);
+        } finally {
+            ps = null;
+            conn.disconnect();
+        }
+        return res;
     }
 
     public ArrayList<Factura> getFacturas(String nombre) throws SQLException {

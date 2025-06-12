@@ -85,7 +85,7 @@ public class UserDAO {
         boolean res = false;
         try{
             ps = conn.connect().prepareStatement(
-                    "DELETE FROM USUARIOS WHERE id = ?"
+                    "DELETE FROM USUARIOS WHERE Usuld = ?"
             );
             ps.setInt(1, user.getId());
 

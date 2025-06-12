@@ -46,6 +46,27 @@ public class FacturaDetalleDAO {
         return res;
     }
 
+    public boolean delete(FacturaDetalle detalle) throws SQLException {
+        boolean res = false;
+        try {
+            ps = conn.connect().prepareStatement(
+                    "DELETE FROM FACTURAS_DETALLE WHERE CodFac = ?"
+            );
+            ps.setInt(1, detalle.getCodFac());
+
+            if(ps.executeUpdate() > 0){
+                res = true;
+            }
+            ps.close();
+        }catch (SQLException e){
+            throw new SQLException("Error al eliminar la factura: " + e.getMessage(), e);
+        } finally {
+            ps = null;
+            conn.disconnect();
+        }
+        return res;
+    }
+
     public ArrayList<FacturaDetalle> getDetalle(int id) throws SQLException {
         ArrayList<FacturaDetalle> records = new ArrayList<>();
         try {
