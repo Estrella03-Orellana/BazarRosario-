@@ -19,7 +19,6 @@ public class OfertasC extends JDialog {
     private JButton btnRegresar;
     private MainForm mainForm;
     private ProductoDAO productoDAO;
-    private final int ID_CATEGORIA = 9;
     private ArrayList<FacturaDetalle> listaFacturas;
 
     public ArrayList<FacturaDetalle> getListaFacturas() {
@@ -67,7 +66,7 @@ public class OfertasC extends JDialog {
 
     private void search(String query) {
         try {
-            ArrayList<Producto> productos = productoDAO.search(query, ID_CATEGORIA);
+            ArrayList<Producto> productos = productoDAO.searchOfertas(query);
             createTable(productos);
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null,
@@ -79,7 +78,7 @@ public class OfertasC extends JDialog {
 
     private void getAll() {
         try {
-            ArrayList<Producto> productos = productoDAO.getAll(ID_CATEGORIA);
+            ArrayList<Producto> productos = productoDAO.getOfertas();
             DefaultTableModel model = new DefaultTableModel() {
                 @Override
                 public boolean isCellEditable(int row, int column) {
