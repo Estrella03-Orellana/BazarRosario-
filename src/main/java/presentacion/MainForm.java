@@ -39,12 +39,12 @@ public class MainForm extends JFrame {
         JMenu menuPerfil = new JMenu("Perfil");
         menuBar.add(menuPerfil);
 
-        /*JMenuItem itemChangePassword = new JMenuItem("Cambiar contraseña");
+        JMenuItem itemChangePassword = new JMenuItem("Cambiar contraseña");
         menuPerfil.add(itemChangePassword);
         itemChangePassword.addActionListener(e -> {
-            ChangePasswordForm changePassword = new ChangePasswordForm(this);
+            CambiarPassword changePassword = new CambiarPassword(this);
             changePassword.setVisible(true);
-        });*/
+        });
 
         JMenuItem itemChangeUser = new JMenuItem("Cambiar de usuario");
         menuPerfil.add(itemChangeUser);
@@ -172,66 +172,66 @@ public class MainForm extends JFrame {
             });
         }
         else {
+            JMenuItem itemStock = new JMenuItem("Stock");
+            menuMas.add(itemStock);
+            itemStock.addActionListener(e -> {
+                StockV formStock =new StockV();
+                formStock.setVisible(true);
+            });
             JMenuItem itemConfi = new JMenuItem("Confitería y Papelería");
             menuMantenimiento.add(itemConfi);
             itemConfi.addActionListener(e -> {
-                ConfiteriayPapeleriaV formConfi =new ConfiteriayPapeleriaV(this);
+                ConfiteriayPapeleriaV formConfi =new ConfiteriayPapeleriaV();
                 formConfi.setVisible(true);
             });
             JMenuItem itemCui = new JMenuItem("Cuidado Personal");
             menuMantenimiento.add(itemCui);
             itemCui.addActionListener(e -> {
-                CuidadoPersonalV formCui = new CuidadoPersonalV(this);
+                CuidadoPersonalV formCui = new CuidadoPersonalV();
                 formCui.setVisible (true);
             });
 
             JMenuItem itemDepo = new JMenuItem("Deportes");
             menuMantenimiento.add(itemDepo);
             itemDepo.addActionListener(e -> {
-                DeportesV formDepo =new DeportesV(this);
+                DeportesV formDepo =new DeportesV();
                 formDepo.setVisible(true);
             });
 
             JMenuItem itemElec = new JMenuItem("Electrodomesticos");
             menuMantenimiento.add(itemElec);
             itemElec.addActionListener(e -> {
-                ElectrodomesticosV formElec =new ElectrodomesticosV(this);
+                ElectrodomesticosV formElec =new ElectrodomesticosV();
                 formElec.setVisible(true);
             });
             JMenuItem itemHogar = new JMenuItem("Hogar y Cocina");
             menuMantenimiento.add(itemHogar);
             itemHogar.addActionListener(e -> {
-                HogaryCocinaV formHogar =new HogaryCocinaV(this);
+                HogaryCocinaV formHogar =new HogaryCocinaV();
                 formHogar.setVisible(true);
             });
             JMenuItem itemJug = new JMenuItem("Juguetes");
             menuMantenimiento.add(itemJug);
             itemJug.addActionListener(e -> {
-                JuguetesV formJug =new JuguetesV(this);
+                JuguetesV formJug =new JuguetesV();
                 formJug.setVisible(true);
             });
             JMenuItem itemLimp = new JMenuItem("Limpieza");
             menuMantenimiento.add(itemLimp);
             itemLimp.addActionListener(e -> {
-                LimpiezaV formLimp =new LimpiezaV(this);
+                LimpiezaV formLimp =new LimpiezaV();
                 formLimp.setVisible(true);
-            });
-            JMenuItem itemOfer = new JMenuItem("Ofertas");
-            menuMantenimiento.add(itemOfer);
-            itemOfer.addActionListener(e -> {
-                OfertasV formOfer =new OfertasV(this);
-                formOfer.setVisible(true);
             });
             JMenuItem itemRopa = new JMenuItem("Ropa");
             menuMantenimiento.add(itemRopa);
             itemRopa.addActionListener(e -> {
-                RopaV formRopa =new RopaV(this);
+                RopaV formRopa =new RopaV();
                 formRopa.setVisible(true);
             });
             JMenuItem itemTec = new JMenuItem("Tecnología");
             menuMantenimiento.add(itemTec);
             itemTec.addActionListener(e -> {
-                TecnologiaV formTec =new TecnologiaV(this);
+                TecnologiaV formTec =new TecnologiaV();
                 formTec.setVisible(true);
             });
         }
