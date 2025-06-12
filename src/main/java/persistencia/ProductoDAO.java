@@ -141,6 +141,41 @@ public class ProductoDAO {
         return records;
     }
 
+    public ArrayList<Producto> searchName(String name) throws SQLException {
+        ArrayList<Producto> records  = new ArrayList<>();
+
+        try {
+            ps = conn.connect().prepareStatement("SELECT ProdId, CategoriaId, TipoProdu, NombreProdu, Precio, Stock, IsOferta " +
+                    "FROM PRODUCTOS " +
+                    "WHERE NombreProdu LIKE ?");
+
+            ps.setString(1, "%" + name + "%");
+
+            rs = ps.executeQuery();
+
+            while (rs.next()){
+                Producto producto = new Producto();
+                producto.setId(rs.getInt(1));
+                producto.setCategoriaId(rs.getInt(2));
+                producto.setTipoProdu(rs.getString(3));
+                producto.setNombreProdu(rs.getString(4));
+                producto.setPrecio(rs.getDouble(5));
+                producto.setStock(rs.getInt(6));
+                producto.setIsOferta(rs.getByte(7));
+                records.add(producto);
+            }
+            ps.close();
+            rs.close();
+        } catch (SQLException ex){
+            throw new SQLException("Error al buscar productos: " + ex.getMessage(), ex);
+        } finally {
+            ps = null;
+            rs = null;
+            conn.disconnect();
+        }
+        return records;
+    }
+
     public ArrayList<Producto> getAll(int id) throws SQLException {
         ArrayList<Producto> records  = new ArrayList<>();
 
@@ -150,6 +185,105 @@ public class ProductoDAO {
                     "WHERE CategoriaId = ?");
 
             ps.setInt(1, id);
+
+            rs = ps.executeQuery();
+
+            while (rs.next()){
+                Producto producto = new Producto();
+                producto.setId(rs.getInt(1));
+                producto.setCategoriaId(rs.getInt(2));
+                producto.setTipoProdu(rs.getString(3));
+                producto.setNombreProdu(rs.getString(4));
+                producto.setPrecio(rs.getDouble(5));
+                producto.setStock(rs.getInt(6));
+                producto.setIsOferta(rs.getByte(7));
+                records.add(producto);
+            }
+            ps.close();
+            rs.close();
+        } catch (SQLException ex){
+            throw new SQLException("Error al buscar productos: " + ex.getMessage(), ex);
+        } finally {
+            ps = null;
+            rs = null;
+            conn.disconnect();
+        }
+        return records;
+    }
+
+    public ArrayList<Producto> getAllNoException() throws SQLException {
+        ArrayList<Producto> records  = new ArrayList<>();
+
+        try {
+            ps = conn.connect().prepareStatement("SELECT * FROM PRODUCTOS");
+
+
+            rs = ps.executeQuery();
+
+            while (rs.next()){
+                Producto producto = new Producto();
+                producto.setId(rs.getInt(1));
+                producto.setCategoriaId(rs.getInt(2));
+                producto.setTipoProdu(rs.getString(3));
+                producto.setNombreProdu(rs.getString(4));
+                producto.setPrecio(rs.getDouble(5));
+                producto.setStock(rs.getInt(6));
+                producto.setIsOferta(rs.getByte(7));
+                records.add(producto);
+            }
+            ps.close();
+            rs.close();
+        } catch (SQLException ex){
+            throw new SQLException("Error al buscar productos: " + ex.getMessage(), ex);
+        } finally {
+            ps = null;
+            rs = null;
+            conn.disconnect();
+        }
+        return records;
+    }
+
+    public ArrayList<Producto> getOfertas() throws SQLException {
+        ArrayList<Producto> records  = new ArrayList<>();
+
+        try {
+            ps = conn.connect().prepareStatement("SELECT * FROM PRODUCTOS WHERE IsOferta = 1");
+
+
+            rs = ps.executeQuery();
+
+            while (rs.next()){
+                Producto producto = new Producto();
+                producto.setId(rs.getInt(1));
+                producto.setCategoriaId(rs.getInt(2));
+                producto.setTipoProdu(rs.getString(3));
+                producto.setNombreProdu(rs.getString(4));
+                producto.setPrecio(rs.getDouble(5));
+                producto.setStock(rs.getInt(6));
+                producto.setIsOferta(rs.getByte(7));
+                records.add(producto);
+            }
+            ps.close();
+            rs.close();
+        } catch (SQLException ex){
+            throw new SQLException("Error al buscar productos: " + ex.getMessage(), ex);
+        } finally {
+            ps = null;
+            rs = null;
+            conn.disconnect();
+        }
+        return records;
+    }
+
+    public ArrayList<Producto> searchOfertas(String name) throws SQLException {
+        ArrayList<Producto> records  = new ArrayList<>();
+
+        try {
+            ps = conn.connect().prepareStatement("SELECT ProdId, CategoriaId, TipoProdu, NombreProdu, Precio, Stock, IsOferta " +
+                    "FROM PRODUCTOS " +
+                    "WHERE NombreProdu LIKE ? AND IsOferta = 1");
+
+            ps.setString(1, "%" + name + "%");
 
             rs = ps.executeQuery();
 
