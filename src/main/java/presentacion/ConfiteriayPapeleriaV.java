@@ -26,18 +26,23 @@ public class ConfiteriayPapeleriaV extends JDialog {
     private JLabel lblStock;
     private JPanel panelPrincipal;
 
-    private final ProductoDAO productoDAO;
+    private final ProductoDAO productoDAO; // Declarado como final
+
+
     private final int CATEGORIA_ID = 6;
 
-    public ConfiteriayPapeleriaV()  {
+
+    public ConfiteriayPapeleriaV() {
+
         productoDAO = new ProductoDAO();
+
         setTitle("Gestión de Confitería y Papelería");
         setContentPane(panelPrincipal);
         setSize(500, 400);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setVisible(true);
 
-        // Eventos
+
         btnInsertar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -74,10 +79,10 @@ public class ConfiteriayPapeleriaV extends JDialog {
         });
     }
 
+
     public ConfiteriayPapeleriaV(MainForm mainForm) {
         this();
     }
-
 
     private void insertarProducto() {
         try {
@@ -154,4 +159,5 @@ public class ConfiteriayPapeleriaV extends JDialog {
         }
     }
 }
+
 
