@@ -2,7 +2,7 @@ package presentacion;
 
 import javax.swing.*;
 
-public class TecnologiaV {
+public class TecnologiaV extends JDialog{
     private JTextField txtCodigoTecno;
     private JComboBox cbTipoTecno;
     private JTextField txtNomTecno;
@@ -13,4 +13,7 @@ public class TecnologiaV {
     private JButton btnEliminar;
     private JButton btnBuscar;
     private JButton btnCerrar;
+
+    public TecnologiaV(MainForm mainForm) {
+    }
 }

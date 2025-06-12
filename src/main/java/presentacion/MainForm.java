@@ -171,6 +171,70 @@ public class MainForm extends JFrame {
                 }
             });
         }
+        else {
+            JMenuItem itemConfi = new JMenuItem("Confitería y Papelería");
+            menuMantenimiento.add(itemConfi);
+            itemConfi.addActionListener(e -> {
+                ConfiteriayPapeleriaV formConfi =new ConfiteriayPapeleriaV(this);
+                formConfi.setVisible(true);
+            });
+            JMenuItem itemCui = new JMenuItem("Cuidado Personal");
+            menuMantenimiento.add(itemCui);
+            itemCui.addActionListener(e -> {
+                CuidadoPersonalV formCui = new CuidadoPersonalV(this);
+                formCui.setVisible (true);
+            });
+
+            JMenuItem itemDepo = new JMenuItem("Deportes");
+            menuMantenimiento.add(itemDepo);
+            itemDepo.addActionListener(e -> {
+                DeportesV formDepo =new DeportesV(this);
+                formDepo.setVisible(true);
+            });
+
+            JMenuItem itemElec = new JMenuItem("Electrodomesticos");
+            menuMantenimiento.add(itemElec);
+            itemElec.addActionListener(e -> {
+                ElectrodomesticosV formElec =new ElectrodomesticosV(this);
+                formElec.setVisible(true);
+            });
+            JMenuItem itemHogar = new JMenuItem("Hogar y Cocina");
+            menuMantenimiento.add(itemHogar);
+            itemHogar.addActionListener(e -> {
+                HogaryCocinaV formHogar =new HogaryCocinaV(this);
+                formHogar.setVisible(true);
+            });
+            JMenuItem itemJug = new JMenuItem("Juguetes");
+            menuMantenimiento.add(itemJug);
+            itemJug.addActionListener(e -> {
+                JuguetesV formJug =new JuguetesV(this);
+                formJug.setVisible(true);
+            });
+            JMenuItem itemLimp = new JMenuItem("Limpieza");
+            menuMantenimiento.add(itemLimp);
+            itemLimp.addActionListener(e -> {
+                LimpiezaV formLimp =new LimpiezaV(this);
+                formLimp.setVisible(true);
+            });
+            JMenuItem itemOfer = new JMenuItem("Ofertas");
+            menuMantenimiento.add(itemOfer);
+            itemOfer.addActionListener(e -> {
+                OfertasV formOfer =new OfertasV(this);
+                formOfer.setVisible(true);
+            });
+            JMenuItem itemRopa = new JMenuItem("Ropa");
+            menuMantenimiento.add(itemRopa);
+            itemRopa.addActionListener(e -> {
+                RopaV formRopa =new RopaV(this);
+                formRopa.setVisible(true);
+            });
+            JMenuItem itemTec = new JMenuItem("Tecnología");
+            menuMantenimiento.add(itemTec);
+            itemTec.addActionListener(e -> {
+                TecnologiaV formTec =new TecnologiaV(this);
+                formTec.setVisible(true);
+            });
+        }
 
         this.setVisible(true);
 

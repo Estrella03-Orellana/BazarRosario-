@@ -2,7 +2,7 @@ package presentacion;
 
 import javax.swing.*;
 
-public class ElectrodomesticosV {
+public class ElectrodomesticosV extends JDialog{
     private JLabel lblStock;
     private JPanel lblCodigoProdu;
     private JLabel lblPrecio;
@@ -20,4 +20,7 @@ public class ElectrodomesticosV {
     private JButton btnBuscar;
     private JButton btnCerrar;
     private JLabel txtTitulo;
+
+    public ElectrodomesticosV(MainForm mainForm) {
+    }
 }

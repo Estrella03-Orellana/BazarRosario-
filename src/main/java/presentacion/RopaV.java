@@ -2,7 +2,7 @@ package presentacion;
 
 import javax.swing.*;
 
-public class RopaV {
+public class RopaV extends JDialog{
     private JTextField txtCodigoPrenda;
     private JComboBox cbGenero;
     private JTextField txtNomPrenda;
@@ -18,4 +18,9 @@ public class RopaV {
     private JLabel lblNomPrenda;
     private JLabel lblPrecioRopa;
     private JLabel lblStockRopa;
+
+    public RopaV(MainForm mainForm) {
+    }
+
+
 }
