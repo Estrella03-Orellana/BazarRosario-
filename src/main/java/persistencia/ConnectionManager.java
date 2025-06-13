@@ -6,20 +6,20 @@ import java.sql.SQLException; // Representa errores específicos de la base de d
 
 public class ConnectionManager {
 
-    /*private static final String STR_CONNECTION = "jdbc:sqlserver://GABNJ\\SQLEXPRESS; " +
-            "encrypt=true; " +
-            "database=BD_Bazar; " +
-            "trustServerCertificate=true;" +
-            "user=java2025;" +
-            "password=12345";*/
-
-   private static final String STR_CONNECTION = "jdbc:sqlserver://LAPTOP-7SKAH6B6\\SQLEXPRESS; " +
+    private static final String STR_CONNECTION = "jdbc:sqlserver://GABNJ\\SQLEXPRESS; " +
             "encrypt=true; " +
             "database=BD_Bazar; " +
             "trustServerCertificate=true;" +
             "user=java2025;" +
             "password=12345";
 
+   /*private static final String STR_CONNECTION = "jdbc:sqlserver://LAPTOP-7SKAH6B6\\SQLEXPRESS; " +
+            "encrypt=true; " +
+            "database=BD_Bazar; " +
+            "trustServerCertificate=true;" +
+            "user=java2025;" +
+            "password=12345";
+*/
     /*private static final String STR_CONNECTION = "jdbc:sqlserver://MELI\\SQLEXPRESS; " +
             "encrypt=true; " +
             "database=BD_Bazar; " +
