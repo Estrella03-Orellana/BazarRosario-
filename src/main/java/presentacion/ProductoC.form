@@ -49,6 +49,7 @@
         <properties>
           <enabled value="false"/>
           <font name="Palatino Linotype"/>
+          <foreground color="-14803166"/>
         </properties>
       </component>
       <component id="abca7" class="javax.swing.JTextField" binding="txtCategoria">
@@ -60,6 +61,7 @@
         <properties>
           <enabled value="false"/>
           <font name="Palatino Linotype"/>
+          <foreground color="-14803166"/>
         </properties>
       </component>
       <component id="af14a" class="javax.swing.JTextField" binding="txtPrecio">
@@ -71,6 +73,7 @@
         <properties>
           <enabled value="false"/>
           <font name="Palatino Linotype"/>
+          <foreground color="-14803166"/>
           <text value=""/>
         </properties>
       </component>
@@ -128,6 +131,7 @@
         <properties>
           <enabled value="false"/>
           <font name="Palatino Linotype"/>
+          <foreground color="-16777216"/>
         </properties>
       </component>
       <component id="a010f" class="javax.swing.JButton" binding="btnCancelar">
