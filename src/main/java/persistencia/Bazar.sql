@@ -64,3 +64,5 @@ INSERT INTO CATEGORIAS(Nombre) VALUES('Electrodomesticos'),
 ('Hogar y Cocina'),
 ('Ofertas'),
 ('Cuidado Personal');
+
+INSERT INTO USUARIOS(NombreUsu, Email, Password, IsAdmin) VALUES('admin', 'admin@gmail.com','WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=',1),
