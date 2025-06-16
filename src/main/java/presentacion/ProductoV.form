@@ -13,8 +13,12 @@
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
-        <border type="none"/>
+        <properties>
+          <background color="-1"/>
+        </properties>
+        <border type="empty">
+          <size top="5" left="5" bottom="5" right="5"/>
+        </border>
         <children>
           <hspacer id="255e">
             <constraints>
@@ -55,6 +59,7 @@
             <properties>
               <editable value="true"/>
               <enabled value="true"/>
+              <font name="Palatino Linotype"/>
             </properties>
           </component>
           <component id="d93b9" class="javax.swing.JTextField" binding="txtTipo">
@@ -65,6 +70,7 @@
             </constraints>
             <properties>
               <enabled value="true"/>
+              <font name="Palatino Linotype"/>
             </properties>
           </component>
           <component id="7ac51" class="javax.swing.JTextField" binding="txtPrecio">
@@ -75,6 +81,7 @@
             </constraints>
             <properties>
               <enabled value="true"/>
+              <font name="Palatino Linotype"/>
               <text value=""/>
             </properties>
           </component>
@@ -98,6 +105,9 @@
               <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-943786"/>
+              <font name="Palatino Linotype" size="16" style="1"/>
+              <foreground color="-16777216"/>
               <text value="Cancelar"/>
             </properties>
           </component>
@@ -106,7 +116,10 @@
               <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-943786"/>
               <enabled value="true"/>
+              <font name="Palatino Linotype" size="16" style="1"/>
+              <foreground color="-16777216"/>
               <hideActionText value="false"/>
               <text value="Modificar"/>
             </properties>
@@ -116,6 +129,9 @@
               <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-1"/>
+              <font name="Palatino Linotype" size="16"/>
+              <foreground color="-16777216"/>
               <text value="Oferta"/>
             </properties>
           </component>
@@ -130,6 +146,8 @@
               <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <font name="Palatino Linotype" size="14"/>
+              <foreground color="-16777216"/>
               <horizontalAlignment value="0"/>
               <horizontalTextPosition value="0"/>
               <text value="Cantidad"/>

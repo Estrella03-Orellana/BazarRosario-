@@ -17,6 +17,7 @@ public class RopaC extends JDialog {
     private JButton btnVer;
     private JPanel mainPanel;
     private JButton btnRegresar;
+    private JLabel lblimg;
     private MainForm mainForm;
     private ProductoDAO productoDAO;
     private final int ID_CATEGORIA = 5;
