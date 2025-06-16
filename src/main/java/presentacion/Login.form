@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="presentacion.Login">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="6" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="637" height="400"/>
+    </constraints>
+    <properties>
+      <background color="-1"/>
+      <minimumSize width="600" height="400"/>
+    </properties>
+    <border type="empty">
+      <size top="4" left="4" bottom="4" right="4"/>
+    </border>
+    <children>
+      <grid id="ea72f" layout-manager="GridLayoutManager" row-count="5" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="5" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1580"/>
+        </properties>
+        <border type="empty">
+          <font/>
+          <title-color color="-2104859"/>
+          <size top="0" left="0" bottom="0" right="0"/>
+        </border>
+        <children>
+          <component id="24e89" class="javax.swing.JLabel" binding="lblBienvenida">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="PMingLiU-ExtB" size="22" style="1"/>
+              <foreground color="-16777216"/>
+              <text value="Bienvenid@"/>
+            </properties>
+          </component>
+          <hspacer id="8079d">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <component id="b43dc" class="javax.swing.JTextPane" binding="entraABazarRosarioTextPane" default-binding="true">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-1580"/>
+              <font name="PMingLiU-ExtB" size="18" style="1"/>
+              <foreground color="-16777216"/>
+              <text value="¡Entra a Bazar Rosario y llena tu nevera, tu hogar y tu vida con la facilidad de compra con nosotros!"/>
+            </properties>
+          </component>
+          <vspacer id="50408">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <component id="65ffb" class="javax.swing.JLabel" binding="lblLogo">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="PMingLiU-ExtB" size="36" style="1"/>
+              <foreground color="-16777216"/>
+              <text value="Bazar Rosario"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <hspacer id="ad862">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="2" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="7bb69" class="javax.swing.JButton" binding="btnRegistrar">
+        <constraints>
+          <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <alignmentX value="0.0"/>
+          <background color="-943786"/>
+          <font name="Palatino Linotype" size="18" style="1"/>
+          <foreground color="-16777216"/>
+          <horizontalTextPosition value="0"/>
+          <selected value="false"/>
+          <text value="Registrate"/>
+        </properties>
+      </component>
+      <component id="60bca" class="javax.swing.JPasswordField" binding="txtPassword">
+        <constraints>
+          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <foreground color="-11644845"/>
+          <text value=""/>
+          <toolTipText value="Password"/>
+        </properties>
+      </component>
+      <component id="6dcf4" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Palatino Linotype" size="16" style="1"/>
+          <foreground color="-16777216"/>
+          <text value="Contraseña"/>
+        </properties>
+      </component>
+      <component id="83c70" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Palatino Linotype" size="16" style="1"/>
+          <foreground color="-16777216"/>
+          <text value="Email"/>
+        </properties>
+      </component>
+      <component id="f4368" class="javax.swing.JTextField" binding="txtEmail">
+        <constraints>
+          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Palatino Linotype" size="16" style="1"/>
+          <foreground color="-11644845"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="fbcb4" class="javax.swing.JButton" binding="btnIngresar">
+        <constraints>
+          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <actionCommand value=" Ingresar "/>
+          <alignmentX value="0.0"/>
+          <background color="-943786"/>
+          <font name="Palatino Linotype" size="18" style="1"/>
+          <foreground color="-16777216"/>
+          <horizontalTextPosition value="0"/>
+          <margin top="0" left="0" bottom="0" right="0"/>
+          <selected value="false"/>
+          <text value="Ingresar"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

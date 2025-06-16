@@ -43,7 +43,7 @@ CREATE TABLE USUARIOS (
 
 -- Crear la tabla FACTURAS_DETALLE
 CREATE TABLE FACTURAS_DETALLE (
-    Id INT PRIMARY KEY NOT IDENTITY(1,1) NULL,
+    Id INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
     CodFac INT NOT NULL,
     NombreUsu NVARCHAR(80) NOT NULL,
     NombreProdu NVARCHAR(250) NOT NULL,
@@ -52,3 +52,17 @@ CREATE TABLE FACTURAS_DETALLE (
     CONSTRAINT FACTURAS_DETALLE_FACTURAS FOREIGN KEY (CodFac)
         REFERENCES FACTURAS(CodFac)
 );
+
+--Insertando datos
+INSERT INTO CATEGORIAS(Nombre) VALUES('Electrodomesticos'),
+('Tecnologia'),
+('Juguetes'),
+('Limpieza'),
+('Ropa'),
+('Confiteria y Papeleria'),
+('Deportes'),
+('Hogar y Cocina'),
+('Ofertas'),
+('Cuidado Personal');
+
+INSERT INTO USUARIOS(NombreUsu, Email, Password, IsAdmin) VALUES('admin', 'admin@gmail.com','WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=',1),
